@@ -3,10 +3,10 @@
 Simples exportar um PDF com NodeJS
 
 
-- [ ] NodeJS
-- [ ] Servidor com uma rota
-- [ ] Template Engine
-- [ ] CallBacks
-
+- [x] NodeJS
+- [x] Servidor com uma rota
+- [x] Template Engine
+- [x] CallBacks
+- [x] Usar o Pupperteer
 
 https://www.youtube.com/watch?v=AoU7aEdTldE&list=WL&index=176&t=75s
