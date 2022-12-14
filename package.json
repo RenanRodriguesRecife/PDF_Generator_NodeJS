@@ -16,5 +16,10 @@
   "bugs": {
     "url": "https://github.com/RenanRodriguesRecife/PDF_Generator_NodeJS/issues"
   },
-  "homepage": "https://github.com/RenanRodriguesRecife/PDF_Generator_NodeJS#readme"
+  "homepage": "https://github.com/RenanRodriguesRecife/PDF_Generator_NodeJS#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.2",
+    "html-pdf": "^3.0.1"
+  }
 }
