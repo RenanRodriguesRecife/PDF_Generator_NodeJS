@@ -24,15 +24,29 @@ const passengers = [
 ]
 
 app.get('/pdf', async (request,response) => {
-    const browser = await puppeteer.launch({headless:false})
+    const browser = await puppeteer.launch()
     const page = await browser.newPage()
 
-    await page.goto('https://google.com',{
+    await page.goto('http://localhost:3000/',{
         waitUntil: 'networkidle0'
     })
 
+    const pdf = await page.pdf({
+        printBackground: true,
+        format: 'Latter',
+        margin:{
+            top: "20px",
+            bottom: "40px",
+            left: "20px",
+            right: "20px"
+        }
+    })
+
     await browser.close()
-    return response.send('feito')
+
+    response.contentType("application/pdf")
+
+    return response.send(pdf)
 
 })
 
