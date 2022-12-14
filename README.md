@@ -10,3 +10,6 @@ Simples exportar um PDF com NodeJS
 - [x] Usar o Pupperteer
 
 https://www.youtube.com/watch?v=AoU7aEdTldE&list=WL&index=176&t=75s
+
+
+58:34
