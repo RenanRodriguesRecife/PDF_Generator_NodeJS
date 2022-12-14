@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório</title>
+</head>
+<body>
+    <div class="">
+        <h1>Lista de Passageiros</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>None</th>
+                    <th>Número do Voo</th>
+                    <th>Horório</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% if(passangers.lenght>0){ %>
+                    <% passangers.forEach(passangers => { %>
+                    <tr>
+                        <td><%= passangers.name %></td>
+                        <td><%= passangers.flightNumber %></td>
+                        <td><%= passangers.time %></td>
+                    </tr>            
+                    <% });%>
+                <% } %>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2"><%=passangers.lenght%> passageiros</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+</html>
