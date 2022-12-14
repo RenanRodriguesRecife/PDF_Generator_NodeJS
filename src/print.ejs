@@ -18,19 +18,19 @@
                 </tr>
             </thead>
             <tbody>
-                <% if(passangers.lenght>0){ %>
-                    <% passangers.forEach(passangers => { %>
+                <% if(passengers.length>0){ %>
+                    <% passengers.forEach(passengers => { %>
                     <tr>
-                        <td><%= passangers.name %></td>
-                        <td><%= passangers.flightNumber %></td>
-                        <td><%= passangers.time %></td>
+                        <td><%= passengers.name %></td>
+                        <td><%= passengers.flightNumber %></td>
+                        <td><%= passengers.time %></td>
                     </tr>            
                     <% });%>
                 <% } %>
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="2"><%=passangers.lenght%> passageiros</td>
+                    <td colspan="2"><%=passengers.lenght%> passageiros</td>
                 </tr>
             </tfoot>
         </table>

@@ -1,7 +1,10 @@
+
 const express = require('express')
+const ejs = require('ejs')
+const path = require('path')
 const app = express()
 
-const passagers = [
+const passengers = [
     {
         name: "MegaMan",
         flightNumber: 4535,
@@ -20,7 +23,15 @@ const passagers = [
 ]
 
 app.get('/',(request,response)=>{
-    return response.send(passagers)
+    const filePath = path.join(__dirname,"print.ejs")
+    ejs.renderFile(filePath,{passengers},(err,data)=>{
+        if(err){
+            return response.send('Erro na leitura do arquivo')
+        }else{
+            return response.send(data)
+        }
+        
+    })
 })
 
 app.listen(3000)
